@@ -6,7 +6,7 @@
             <h1 class="mb-2">Our Master Chefs</h1>
         </div>
         <div class="row">
-            <div class="col-3 fadeInUp animated" animation-delay:0.1s>
+            <div class="col-3 fadeInUp animated delay-01" animation-delay:0.1s>
                 <div class="team-item text-center overflow-hidden">
                     <div class="rounded-circle overflow-hidden m-1">
                         <img src="https://themewagon.github.io/restoran/img/team-1.jpg" alt="" class="img-fluid">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 fadeInUp animated delay-03">
                 <div class="team-item text-center overflow-hidden">
                     <div class="rounded-circle overflow-hidden m-1">
                         <img src="https://themewagon.github.io/restoran/img/team-1.jpg" alt="" class="img-fluid">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 fadeInUp animated delay-05">
                 <div class="team-item text-center overflow-hidden">
                     <div class="rounded-circle overflow-hidden m-1">
                         <img src="https://themewagon.github.io/restoran/img/team-1.jpg" alt="" class="img-fluid">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 fadeInUp animated delay-07">
                 <div class="team-item text-center overflow-hidden">
                     <div class="rounded-circle overflow-hidden m-1">
                         <img src="https://themewagon.github.io/restoran/img/team-1.jpg" alt="" class="img-fluid">
@@ -113,8 +113,14 @@ export default {
     height: calc(100% - 38px);
     transition: .5s;
 }
+.team-item img {
+    transition: all .5s;
+}
 .team-item:hover {
     height: 100%;
+}
+.team-item:hover img{
+    transform: scale(1.1);
 }
 .team-item .btn {
     border-radius: 38px 38px 0 0;

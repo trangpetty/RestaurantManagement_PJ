@@ -3,16 +3,16 @@
         <div class="container row align-items-center">
             <div class="col-6">
                 <div class="row">
-                    <div class="col-6 mt-1 px-05 text-start">
+                    <div class="col-6 mt-1 px-05 text-star zoomIn animated delay-01">
                         <img src="https://themewagon.github.io/restoran/img/about-1.jpg" class="w-100 img-fluid" alt="">
                     </div>
-                    <div class="col-6 mt-1 px-05 text-start">
+                    <div class="col-6 mt-1 px-05 text-start zoomIn animated delay-03">
                         <img src="https://themewagon.github.io/restoran/img/about-2.jpg" class="w-75 img-fluid" alt="" style="margin-top: 25%;">
                     </div>
-                    <div class="col-6 mt-1 px-05 text-end">
+                    <div class="col-6 mt-1 px-05 text-end zoomIn animated delay-05">
                         <img src="https://themewagon.github.io/restoran/img/about-3.jpg" class="w-75 img-fluid" alt="">
                     </div>
-                    <div class="col-6 mt-1 px-05 text-end">
+                    <div class="col-6 mt-1 px-05 text-end zoomIn animated delay-07">
                         <img src="https://themewagon.github.io/restoran/img/about-4.jpg" class="w-100 img-fluid" alt="">
                     </div>
                 </div>

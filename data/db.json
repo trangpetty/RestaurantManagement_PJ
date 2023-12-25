@@ -34,43 +34,62 @@
     },
     {
       "name": "Samgyetang",
-      "price": "50000",
+      "price": 50000,
       "image": "https://i.pinimg.com/236x/6b/fb/b9/6bfbb91d6ccf13b06ac9baecf12844b7.jpg",
       "id": 2
-    },
-    {
-      "password": "22072001",
-      "id": 3
     },
     {
       "name": "Korean fried chicken",
       "price": "70000",
       "image": "https://i.pinimg.com/236x/03/88/92/038892c2ec093e30ead69ac2b3b2dcea.jpg",
-      "id": 4
+      "id": 3
     },
     {
       "name": "Spicy cold noodle",
       "price": "55000",
       "image": "https://i.pinimg.com/236x/18/79/fe/1879feaf312269416c9c0a609d496dfc.jpg",
-      "id": 5
+      "id": 4
     },
     {
       "name": "Jajangmyeon",
       "price": "65000",
       "image": "https://i.pinimg.com/236x/b0/04/6a/b0046ae12f2c8b7cce398efe0e2f7134.jpg",
-      "id": 6
+      "id": 5
     },
     {
       "name": "Bulgogi",
       "price": "90000",
       "image": "https://i.pinimg.com/236x/3c/6d/c3/3c6dc3a9e7c9358198c91630a9f6d717.jpg",
-      "id": 7
+      "id": 6
     },
     {
       "name": "Kimbap",
       "price": "35000",
       "image": "https://i.pinimg.com/564x/8f/34/b6/8f34b62171f489c87c46eec64af20709.jpg",
-      "id": 8
+      "id": 7
+    }
+  ],
+  "bills": [
+    {
+      "date_time": "25/12/2023 - 15:54",
+      "cost": 135000,
+      "id": 1
+    }
+  ],
+  "bill_details": [
+    {
+      "meal": "Bibimbap",
+      "quantity": 1,
+      "cost": 45000,
+      "bill_id": 1,
+      "id": 1
+    },
+    {
+      "meal": "Bulgogi",
+      "quantity": 1,
+      "cost": 90000,
+      "bill_id": 1,
+      "id": 2
     }
   ]
 }

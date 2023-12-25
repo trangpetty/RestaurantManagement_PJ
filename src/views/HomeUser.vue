@@ -14,28 +14,28 @@
     </div>
     <div class="container py-5 page">
         <div class="d-flex w-100">
-            <div class="col-3 slideInLeft animated">
+            <div class="col-3 fadeInUp animated delay-01">
                 <div class="bg-white box-shadow p-4 card-item">
                     <font-awesome-icon icon="fa-solid fa-user-tie" class="fs-3 mb-1" />
                     <h2>Master Chefs</h2>
                     <p class="text-light">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                 </div>
             </div>
-            <div class="col-3 slideInLeft animated">
+            <div class="col-3 fadeInUp animated delay-03">
                 <div class="bg-white box-shadow p-4 card-item">
                     <font-awesome-icon icon="fa-solid fa-utensils" class="fs-3 mb-1" />
                     <h2>Quality Food</h2>
                     <p class="text-light">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                 </div>
             </div>
-            <div class="col-3 slideInLeft animated">
+            <div class="col-3 fadeInUp animated delay-05">
                 <div class="bg-white box-shadow p-4 card-item">
                     <font-awesome-icon icon="fa-solid fa-cart-plus" class="fs-3 mb-1" />  
                     <h2>Online Order</h2>           
                     <p class="text-light">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                 </div>
             </div>
-            <div class="col-3 slideInLeft animated">
+            <div class="col-3 fadeInUp animated delay-07">
                 <div class="bg-white box-shadow p-4 card-item">
                     <font-awesome-icon icon="fa-solid fa-headphones" class="fs-3 mb-1" />                   
                     <h2>24/7 Service</h2>
@@ -81,6 +81,18 @@ h2 {
     animation-duration: 1s;
     animation-fill-mode: both;
 }
+.delay-01 {
+    animation-delay: 0.1s;
+}
+.delay-03 {
+    animation-delay: 0.3s;
+}
+.delay-05 {
+    animation-delay: 0.5s;
+}
+.delay-07 {
+    animation-delay: 0.7s;
+}
 .fadeInUp {
     animation-name: fadeInUp;
 }
@@ -92,6 +104,18 @@ h2 {
     100% {
         opacity: 1;
         transform: none;
+    }
+}
+.zoomIn {
+    animation-name: zoomIn;
+}
+@keyframes zoomIn {
+    0% {
+    opacity: 0;
+    transform: scale3d(.3,.3,.3);
+    }
+    50% {
+        opacity: 1;
     }
 }
 .slideInDown {

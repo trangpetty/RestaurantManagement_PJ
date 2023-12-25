@@ -8,15 +8,16 @@
     text-color="#fff"
   >
   <el-menu-item index="1"><router-link to="/">Home</router-link></el-menu-item>
-    <el-menu-item index="2"><router-link to="/users">Users</router-link></el-menu-item>
-    <div class="flex-grow" />
-    <el-menu-item>
-        <img
-          :src="avatar"
-          class="img-avatar"
-        />
-        <span>Hello, {{ name }}</span>
-      </el-menu-item>
+  <el-menu-item index="2"><router-link to="/users">Users</router-link></el-menu-item>
+  <el-menu-item index="3"><router-link to="/bills">Bills</router-link></el-menu-item>
+  <div class="flex-grow" />
+  <el-menu-item>
+      <img
+        :src="avatar"
+        class="img-avatar"
+      />
+      <span>Hello, {{ name }}</span>
+    </el-menu-item>
     <el-menu-item @click="open">Logout <el-icon><Right /></el-icon></el-menu-item>
   </el-menu>
   <el-dialog

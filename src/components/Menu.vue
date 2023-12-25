@@ -1,13 +1,13 @@
 <template>
     <div class="py-5 my-5">
-        <div class="text-center">
+        <div class="text-center fadeInUp animated">
             <h5 class="text-pink section-title mb-05">Food Menu</h5>
             <h1 class="mb-2">Most Popular Items</h1>
         </div>
         <el-tabs>
-          <el-tab-pane>
+          <el-tab-pane class="fadeInUp animated">
             <template #label>
-              <span class="d-flex align-items-center">
+              <span class="d-flex align-items-center fadeInUp animated">
                   <font-awesome-icon icon="fa-solid fa-mug-saucer" style="font-size: 2rem;"/>
                   <div class="ps-05">
                       <p>Popular</p>
@@ -26,7 +26,7 @@
                             </h3>
                             <div class="d-flex justify-content-between">
                                 <div></div>
-                                <el-input-number :min="0"/>
+                                <el-input-number :min="0" @change="handleChange(this.value)"/>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
           </el-tab-pane>
           <el-tab-pane>
             <template #label>
-              <span class="d-flex align-items-center">
+              <span class="d-flex align-items-center fadeInUp animated">
                   <font-awesome-icon icon="fa-solid fa-burger" style="font-size: 2rem;"/>            
                   <div class="ps-05">
                       <p>Special</p>
@@ -43,7 +43,7 @@
                   </div>
               </span>
             </template>
-            <div class="row page container">
+            <div class="row page container fadeInUp animated">
                 <div class="col-6" v-for="item in meals" :key="item.id">
                     <div class="d-flex align-items-center">
                         <img :src="item.image" alt="" class="img-food">
@@ -60,7 +60,7 @@
           </el-tab-pane>
           <el-tab-pane>
             <template #label>
-              <span class="d-flex align-items-center">
+              <span class="d-flex align-items-center fadeInUp animated">
                   <font-awesome-icon icon="fa-solid fa-utensils" style="font-size: 2rem;"/>            
                   <div class="ps-05">
                       <p>Lovely</p>
@@ -68,7 +68,7 @@
                   </div>
               </span>
             </template>
-            <div class="row page container">
+            <div class="row page container fadeInUp animated">
                 <div class="col-6" v-for="item in meals" :key="item.id">
                     <div class="d-flex align-items-center">
                         <img :src="item.image" alt="" class="img-food">
@@ -97,6 +97,11 @@ export default {
         return {
             meals: [],
             num: 0
+        }
+    },
+    methods: {
+        handleChange (value) {
+            console.log(value)
         }
     },
     async mounted() {
