@@ -15,7 +15,10 @@
             <el-form-item>
                 <el-input placeholder="Password" type="password" show-password4 v-model="password"></el-input>
             </el-form-item>
-            <el-button type="primary" plain @click="signUp()" class="btn-submit">Sign Up</el-button>
+            <div class="text-start">
+                <el-text type="danger" size="large">{{ text_err }}</el-text>
+            </div>
+            <el-button type="primary" plain @click="signUp()" class="btn-submit mt-1">Sign Up</el-button>
         </el-form>
         <el-text class="mx-1" size="large">Already have an account? <router-link to="/login"><el-link type="primary">Login</el-link></router-link></el-text>
     </div>
@@ -33,24 +36,36 @@ export default {
             email: '',
             password: '',
             image: '',
-            role: 0
+            role: 0,
+            text_err: ''
         }
     },
     methods: {
         async signUp() {
-            let result = await axios.post("http://localhost:3000/users", {
-                name: this.name,
-                email: this.email,
-                password: this.password,
-                image: this.image,
-                role: this.role
-            })
-            if (result.status == 201) {
-                this.loading = true
-                setTimeout(() => {
-                    this.$router.push({name: 'Home'})
-                }, 2000);
-                localStorage.setItem("user-info", JSON.stringify(result.data))
+            if (this.name == '' || this.email == '' || this.password == '') {
+                this.text_err = 'Name, email and password are required!'
+            }
+            else {
+                let check = await axios.get(`http://localhost:3000/users?email=${this.email}`)
+                if (check.status == 200) {
+                    this.text_err = 'Email already exists'
+                }
+                else {
+                    let result = await axios.post("http://localhost:3000/users", {
+                        name: this.name,
+                        email: this.email,
+                        password: this.password,
+                        image: this.image,
+                        role: this.role
+                    })
+                    if (result.status == 201) {
+                        this.loading = true
+                        setTimeout(() => {
+                            this.$router.push({name: 'Home'})
+                        }, 2000);
+                        localStorage.setItem("user-info", JSON.stringify(result.data))
+                    }
+                }
             }
         }
     }

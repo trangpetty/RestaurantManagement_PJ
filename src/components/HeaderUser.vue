@@ -21,21 +21,24 @@
       <el-menu-item index="5-1">SERVICE</el-menu-item>
       <el-menu-item index="5-2">OUR TEAM</el-menu-item>
       <el-menu-item index="5-3">FEEDBACK</el-menu-item>
-      
     </el-sub-menu>
-    <el-menu-item>
+    <el-menu-item v-if="sign_up">
+        <router-link to="/login">Login</router-link>
+      </el-menu-item>
+    <el-menu-item v-if="user_info">
         <img
           :src="avatar"
           class="img-avatar"
         />
         <span>Hello, {{ name }}</span>
       </el-menu-item>
-    <el-menu-item @click="open">Logout <el-icon><Right /></el-icon></el-menu-item>
+    <el-menu-item v-if="user_info" @click="open">Logout <el-icon><Right /></el-icon></el-menu-item>
   </el-menu>
     <el-dialog
       v-model="openModal"
       title="Notice"
       width="30%"
+      v-loading="loading"
     >
     <span>Do you want to log out?</span>
     <template #footer>
@@ -53,10 +56,13 @@
       name: 'Header',
       data () {
           return {
+              loading: false,
               activeIndex: "1",
               avatar: "",
               name: '',
-              openModal: false
+              openModal: false,
+              user_info: false,
+              sign_up: true
           }
       },
       methods: {
@@ -64,14 +70,24 @@
           this.openModal = true
         },
         logout() {
-            localStorage.clear()
-            this.$router.push({name: 'Login'})
+          localStorage.clear()
+          this.loading = true
+          setTimeout(() => {
+            this.loading = false
+            this.sign_up = true
+            this.user_info = false
+            this.openModal = false
+          }, 1000);
         }
       },
       mounted() {
-          let user = localStorage.getItem('user-info');
+        let user = localStorage.getItem('user-info');
+        if (user) {
           this.avatar = JSON.parse(user)[0].image
           this.name = JSON.parse(user)[0].name
+          this.user_info = true
+          this.sign_up = false
+        }
       }
   }
   </script>

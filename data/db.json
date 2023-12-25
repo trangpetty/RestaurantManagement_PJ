@@ -10,15 +10,16 @@
     },
     {
       "name": "trang",
-      "email": "trangpetty22072001@gmail.com",
-      "role": 0,
+      "email": 2,
+      "password": "000000",
       "image": "https://i.pinimg.com/236x/22/73/15/22731510633e26da89180e4b3c57d40e.jpg",
+      "role": 0,
       "id": 2
     },
     {
       "name": "user01",
       "email": "user@gmail.com",
-      "password": "000000",
+      "password": "22072001",
       "image": "https://i.pinimg.com/236x/e5/63/b7/e563b7005f806e37ba4bc05c719f1f8c.jpg",
       "role": 0,
       "id": 3
@@ -38,9 +39,7 @@
       "id": 2
     },
     {
-      "name": "Tteokbokki",
-      "price": "35000",
-      "image": "https://i.pinimg.com/236x/2d/e6/2a/2de62aab91c71f429b253d8d376ddd4e.jpg",
+      "password": "22072001",
       "id": 3
     },
     {
