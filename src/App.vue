@@ -60,6 +60,9 @@ nav a.router-link-exact-active {
 .mx-05 {
   margin: 0 0.25rem!important;
 }
+.mx-auto {
+  margin: 0 auto;
+}
 .mb-1 {
   margin-bottom: 1.5rem;
 }
@@ -77,6 +80,9 @@ nav a.router-link-exact-active {
 }
 .px-1 {
   padding: 0 1rem;
+}
+.py-1 {
+  padding: 1rem 0;
 }
 .pb-3 {
   padding-bottom: 48px;
@@ -166,5 +172,8 @@ nav a.router-link-exact-active {
 }
 .border-bottom {
     border-bottom: 1px solid #dee2e6 !important;
+}
+.page {
+    width: 1320px;
 }
 </style>

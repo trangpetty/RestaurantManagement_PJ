@@ -10,10 +10,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBurger, faCartPlus, faHeadphones, faMugSaucer, faUserTie, faUtensils } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faAngleRight, faBurger, faCartPlus, faEnvelope, faHeadphones, faLocationDot, faMugSaucer, faPhone, faUserTie, faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 /* add icons to the library */
-library.add(faUtensils, faUserTie, faCartPlus, faHeadphones, faFacebookF, faTwitter, faInstagram, faMugSaucer, faBurger)
+library.add(faUtensils, faUserTie, faCartPlus, faHeadphones, faFacebookF, faTwitter, faInstagram, faMugSaucer, faBurger, faAngleRight, faLocationDot, faPhone, faEnvelope, faYoutube, faLinkedinIn)
 
 const app = createApp(App)
 app.use(ElementPlus)

@@ -15,7 +15,6 @@
     <el-menu-item index="1"><router-link to="/home-user">HOME</router-link></el-menu-item>
     <el-menu-item index="2"><router-link to="/about">ABOUT</router-link></el-menu-item>
     <el-menu-item index="3"><router-link to="/menu">MENU</router-link></el-menu-item>
-    <el-menu-item index="4">MENU</el-menu-item>
     <el-sub-menu index="5">
       <template #title><p style="font-size: 20px;">PAGE</p></template>
       <el-menu-item index="5-1">SERVICE</el-menu-item>
@@ -26,11 +25,13 @@
         <router-link to="/login">Login</router-link>
       </el-menu-item>
     <el-menu-item v-if="user_info">
+      <router-link to="/user">
         <img
           :src="avatar"
           class="img-avatar"
         />
         <span>Hello, {{ name }}</span>
+      </router-link>
       </el-menu-item>
     <el-menu-item v-if="user_info" @click="open">Logout <el-icon><Right /></el-icon></el-menu-item>
   </el-menu>
@@ -83,8 +84,8 @@
       mounted() {
         let user = localStorage.getItem('user-info');
         if (user) {
-          this.avatar = JSON.parse(user)[0].image
-          this.name = JSON.parse(user)[0].name
+          this.avatar = JSON.parse(user).image
+          this.name = JSON.parse(user).name
           this.user_info = true
           this.sign_up = false
         }

@@ -19,8 +19,9 @@
     {
       "name": "user01",
       "email": "user@gmail.com",
-      "password": "22072001",
+      "phone": "035808095",
       "image": "https://i.pinimg.com/236x/e5/63/b7/e563b7005f806e37ba4bc05c719f1f8c.jpg",
+      "password": "000000",
       "role": 0,
       "id": 3
     }

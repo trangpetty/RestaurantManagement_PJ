@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import HomeUser from '../views/HomeUser.vue'
 import About from '../views/About.vue'
 import Menu from '../views/Menu.vue'
+import User from '../views/User.vue'
 import SignUp from '../components/SignUp.vue'
 import Login from '../components/Login.vue'
 import Users from '../components/Users.vue'
@@ -38,6 +39,11 @@ const routes = [
     path: '/menu',
     name: 'Menu',
     component: Menu
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: User
   },
   {
     path: '/sign-up',

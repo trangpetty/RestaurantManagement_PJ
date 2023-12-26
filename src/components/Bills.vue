@@ -9,7 +9,7 @@
             <el-table-column fixed="right" label="Actions">
               <template #default="scope">
                 <el-button type="primary" circle @click="getBill(scope.row.id)">
-                  <el-icon><Edit /></el-icon>
+                    <el-icon><More /></el-icon>
                 </el-button>
                 <el-button type="danger" circle @click="deleteBill(scope.row.id)">
                   <el-icon><Delete /></el-icon>
@@ -17,13 +17,13 @@
               </template>
             </el-table-column>
         </el-table>
-        <el-dialog v-model="detailModal" title="Update user">
+        <el-dialog v-model="detailModal" title="Detail Bill">
             <el-table :data="bill" height="250" style="width: 100%">
                 <el-table-column prop="meal" label="Meal" width="180" />
                 <el-table-column prop="quantity" label="Quantity" width="180" />
                 <el-table-column prop="cost" label="Cost" />
             </el-table>
-        </el-dialog>
+        </el-dialog>            
     </div>
 </template>
 
@@ -49,6 +49,10 @@ export default {
       }
     },
     mounted () {
+        let user = localStorage.getItem('user-info');
+        if(!JSON.parse(user)[0].role) {
+        this.$router.push({name: 'SignUp'})
+        }
         this.loadData()
     },
     methods: {

@@ -111,10 +111,8 @@ export default {
 }
 </script>
 
-<style>
-.page {
-    width: 1320px;
-}
+<style scoped>
+
 .section-title::before {
     position: absolute;
     content: "";

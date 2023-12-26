@@ -167,7 +167,7 @@ export default {
   mounted() 
   {
     let user = localStorage.getItem('user-info');
-    if(!user) {
+    if(!JSON.parse(user)[0].role) {
       this.$router.push({name: 'SignUp'})
     }
     this.loadData()

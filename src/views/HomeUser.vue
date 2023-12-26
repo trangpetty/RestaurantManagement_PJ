@@ -47,15 +47,17 @@
     <About />
     <Menu />
     <Team />
+    <Footer />
 </template>
 
 <script>
 import HeaderUser from '@/components/HeaderUser.vue';
+import Footer from '@/components/Footer.vue';
 import About from '@/components/About.vue';
 import Menu from '@/components/Menu.vue';
 import Team from '@/components/Team.vue';
 export default {
-    components: {HeaderUser, About, Menu, Team}
+    components: {HeaderUser, About, Menu, Team, Footer}
 }
 </script>
 
@@ -159,6 +161,9 @@ h2 {
 .fs-2 {
     font-size: 3rem!important;
 }
+.fs-1 {
+    font-size: 1rem!important;
+}
 .lh-2 {
     line-height: 1.2;
 }
@@ -198,6 +203,9 @@ h2 {
 }
 .p-4 {
     padding: 1.5rem!important;
+}
+.p-2 {
+    padding: 1rem;
 }
 .card-item {
     transition: all .5s ease;
